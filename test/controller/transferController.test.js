@@ -42,6 +42,10 @@ describe('Transfer Controller', () => {
 
         it('Usando Mocks: Quando informo remetente e destinátario inexistentes recebo 400', async () => {
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+=======
+                    
+>>>>>>> Stashed changes
 =======
                     
 >>>>>>> Stashed changes
@@ -52,8 +56,14 @@ describe('Transfer Controller', () => {
             const resposta = await request(app)
                 .post('/transfer')
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
                 .send({
                     from: "Natalia",
+=======
+                .set('Authorization', `Bearer ${token}`)
+                .send({
+                    from: "natalia",
+>>>>>>> Stashed changes
 =======
                 .set('Authorization', `Bearer ${token}`)
                 .send({
