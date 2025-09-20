@@ -7,21 +7,9 @@ const  {expect} =  require('chai'); //para fazer asserções
 
 
 // Testes
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-describe('Transfer', () => {
-    describe('POST /transfers', () => {
-        it.only('Quando informo remetente e destinátario inexistentes recebo 400', async () => {
-=======
 describe('Transfer external', () => {
     describe('POST /transfers', () => {
         it('Quando informo remetente e destinátario inexistentes recebo 400', async () => {
->>>>>>> Stashed changes
-=======
-describe('Transfer external', () => {
-    describe('POST /transfers', () => {
-        it('Quando informo remetente e destinátario inexistentes recebo 400', async () => {
->>>>>>> Stashed changes
            //1 Capturar o Token
             const respostaLogin = await request('http://localhost:3000')
                 .post('/login')

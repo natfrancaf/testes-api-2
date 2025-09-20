@@ -41,34 +41,16 @@ describe('Transfer Controller', () => {
 
 
         it('Usando Mocks: Quando informo remetente e destinátario inexistentes recebo 400', async () => {
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-=======
                     
->>>>>>> Stashed changes
-=======
-                    
->>>>>>> Stashed changes
             //Mocar a função transfer do service
             const transferServiceMock = sinon.stub(transferService, 'transfer');
             transferServiceMock.returns({ error: 'Sender or recipient not found.' });
 
             const resposta = await request(app)
                 .post('/transfer')
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-                .send({
-                    from: "Natalia",
-=======
                 .set('Authorization', `Bearer ${token}`)
                 .send({
                     from: "natalia",
->>>>>>> Stashed changes
-=======
-                .set('Authorization', `Bearer ${token}`)
-                .send({
-                    from: "natalia",
->>>>>>> Stashed changes
                     to: "Fabio",
                     amount: 100
                 }) //usando o supertest pra fazer requisições
