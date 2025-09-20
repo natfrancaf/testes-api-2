@@ -8,6 +8,9 @@ const  {expect} =  require('chai'); //para fazer asserções
 const app = require('../../app');
 const transferService = require('../../service/transferService');
 
+//Mock
+const transferService = require('../../service/transferService')
+
 // teste sem uso de simulador
 describe('Transfer Controller', () => {
     describe('POST /transfers', () => {
@@ -40,8 +43,10 @@ describe('Transfer Controller', () => {
         });
 
 
+
         it('Usando Mocks: Quando informo remetente e destinátario inexistentes recebo 400', async () => {
                     
+
             //Mocar a função transfer do service
             const transferServiceMock = sinon.stub(transferService, 'transfer');
             transferServiceMock.returns({ error: 'Sender or recipient not found.' });
@@ -51,6 +56,7 @@ describe('Transfer Controller', () => {
                 .set('Authorization', `Bearer ${token}`)
                 .send({
                     from: "natalia",
+
                     to: "Fabio",
                     amount: 100
                 }) //usando o supertest pra fazer requisições
