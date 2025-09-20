@@ -6,7 +6,7 @@ const  {expect} =  require('chai'); //para fazer asserções
 
 // Aplicação
 const app = require('../../app');
-const transferService = require('../../service/transferService');
+//const transferService = require('../../service/transferService');
 
 //Mock
 const transferService = require('../../service/transferService')
